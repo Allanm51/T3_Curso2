@@ -20,7 +20,7 @@ namespace Alura.Adopet.Console.Comandos
         }
 
         private async Task ListaDadosPetsDaAPIAsync()
-        {
+        {          
             IEnumerable<Pet>? pets = await clientPet.ListPetsAsync();
             System.Console.WriteLine("----- Lista de Pets importados no sistema -----");
             foreach (var pet in pets)
