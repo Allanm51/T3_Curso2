@@ -7,7 +7,7 @@ namespace Alura.Adopet.Console.Comandos
 {
     [DocComandoAttribute(instrucao: "list",
       documentacao: "adopet list comando que exibe no terminal o conteúdo cadastrado na base de dados da AdoPet.")]
-    internal class List: IComando
+    public class List: IComando
     {
         private readonly HttpClientPet clientPet;
 
@@ -16,7 +16,7 @@ namespace Alura.Adopet.Console.Comandos
             this.clientPet = clientPet;
         }
 
-        public Task<Result> ExecutarAsync(string[] args)
+        public Task<Result> ExecutarAsync()
         {
             return this.ListaDadosPetsDaAPIAsync();
         }
